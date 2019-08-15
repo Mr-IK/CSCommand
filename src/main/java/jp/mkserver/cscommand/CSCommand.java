@@ -20,6 +20,10 @@ public final class CSCommand extends JavaPlugin implements CommandExecutor {
                 return true;
             }
             if(CrackShotAPI.isNameWeaponContain(args[0])){
+                if(!p.hasPermission("cscommand.fire."+args[0])){
+                    p.sendMessage("§cあなたには権限がありません");
+                    return true;
+                }
                 CrackShotAPI.fire(p,args[0],true);
             }else{
                 p.sendMessage("§cそのCrackShot Weaponは存在しません");
