@@ -1,0 +1,11 @@
+name: CSCommand
+version: ${project.version}
+main: jp.mkserver.cscommand.CSCommand
+authors: [Mr_IK]
+description: CSCommand
+depend: [CrackShot]
+commands:
+  cscmd:
+    description: CSCommand
+    usage: /<command>
+    default: op
